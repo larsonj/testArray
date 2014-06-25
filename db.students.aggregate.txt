@@ -1,0 +1,21 @@
+db.students.aggregate(
+    // Initial document match (uses index, if a suitable one is available)
+//    { $match: {
+//        _id : 1
+//    }},
+
+    // Expand the scores array into a stream of documents
+    { $unwind: '$scores' },
+
+    // Filter to 'homework' scores 
+//    { $match: {
+//        'scores.type': 'homework'
+//    }},
+
+    // Sort in descending order
+    { $sort: {
+      	name: 1,
+        'scores.score': -1
+    }},
+    {$limit: 10}
+)
