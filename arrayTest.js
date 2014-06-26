@@ -21,22 +21,20 @@ var myObjArray = 	{
 }
 
 
-//console.log(myObjArray.scores[0].score);
-
-var DEBUG = true;
+var DEBUG = false;
 
 if (DEBUG) {
-	debugger
+	debugger;
 };
 
-var lowestScoreIndex = 0 // set to myObjArray.scores[0].score - first object in the array
+var lowestScoreIndex = 0; // set to myObjArray.scores[0].score - first object in the array
 var lowestScoreObject = myObjArray.scores[lowestScoreIndex];
 console.log(lowestScoreObject);
 
-for (var i = 1; i < myObjArray.scores.length; i++) { 
+for (var i = 1; i < myObjArray.scores.length; i++) {
 
 	if (myObjArray.scores[i].score < lowestScoreObject.score) {
-		lowestScoreIndex = i // set to position of myObjArray.scores[i].score;
+		lowestScoreIndex = i; // set to position of myObjArray.scores[i].score;
 		lowestScoreObject = myObjArray.scores[i];
 		console.log("new lowestScoreIndex found ");
 		console.log(lowestScoreObject);
@@ -44,19 +42,16 @@ for (var i = 1; i < myObjArray.scores.length; i++) {
 		console.log("lowestScoreIndex: [" + lowestScoreIndex + "]");
 
 		if (DEBUG) { // if(myObjArray.scores)
-			debugger
+			debugger;
 		};
 
 	} 
 
-	if (DEBUG) { // for () 
-		debugger
-	};
 };
 
 if (DEBUG) {  // 
-	debugger
+	debugger;
 }
 
-console.log("lowest score found: " + lowestScoreObject);
-
+// what we ended up with
+console.dir("lowest score found: " + lowestScoreObject.score + " [" + lowestScoreObject.type + "]");
