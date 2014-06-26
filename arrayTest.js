@@ -21,7 +21,7 @@ var myObjArray = 	{
 }
 
 
-var DEBUG = false;
+var DEBUG = true;
 
 if (DEBUG) {
 	debugger;
